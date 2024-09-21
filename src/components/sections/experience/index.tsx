@@ -6,9 +6,9 @@ const Experience = () => {
       <div className="max-w-7xl w-full mx-auto flex flex-col gap-8 ">
         <h2 className="text-black-100 text-2xl font-bold">My Experience</h2>
         <div className="grid grid-cols-3 gap-x-4 gap-y-8">
-          <ExperienceCard title="Atitude 247" href="" />
-          <ExperienceCard title="Garrafa no Mar" href="garrafa-no-mar" />
-          <ExperienceCard title="Vitalongis" href="" />
+          <ExperienceCard title="Atitude 247" href="" src="247-logo.svg" />
+          <ExperienceCard title="Garrafa no Mar" href="garrafa-no-mar" src="/gnm-logo.svg" />
+          <ExperienceCard title="Vitalongis" href="" src="vl-logo.svg" />
         </div>
       </div>
     </section>

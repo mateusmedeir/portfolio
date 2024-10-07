@@ -1,0 +1,37 @@
+{
+  "Components": {
+    "Topbar": {
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact",
+      "resume": "Resume"
+    },
+    "ExperienceHero": {
+      "role": "Role",
+      "duration": {
+        "title": "Duração",
+        "time": "{start} - {end}",
+        "locale": "en-US"
+      }
+    }
+  },
+  "Forms": {},
+  "Home": {
+    "Hero": {
+      "title": {
+        "text": "Hi, I&apos;m Mateus Lopes, a",
+        "highlight": "Full Stack Developer"
+      }
+    },
+    "Experience": {
+      "title": "My Experience"
+    },
+    "Projects": {
+      "title": "Projects I have worked on"
+    }
+  },
+  "GarrafaNoMar": {
+    "description": "Garrafa no Mar is an app designed to help people in financially vulnerable situations pay their bills through anonymous donations.",
+    "role": "Full Stack Developer"
+  }
+}

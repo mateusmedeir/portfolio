@@ -1,0 +1,37 @@
+{
+  "Components": {
+    "Topbar": {
+      "experience": "Experiência",
+      "projects": "Projetos",
+      "contact": "Contato",
+      "resume": "Currículo"
+    },
+    "ExperienceHero": {
+      "role": "Função",
+      "duration": {
+        "title": "Duração",
+        "time": "{start} - {end}",
+        "locale": "pt-BR"
+      }
+    }
+  },
+  "Forms": {},
+  "Home": {
+    "Hero": {
+      "title": {
+        "text": "Olá, sou Mateus Lopes, um",
+        "highlight": "Desenvolvedor Full Stack"
+      }
+    },
+    "Experience": {
+      "title": "Minha Experiência"
+    },
+    "Projects": {
+      "title": "Projetos que já trabalhei"
+    }
+  },
+  "GarrafaNoMar": {
+    "description": "Garrafa no Mar é um aplicativo projetado para ajudar pessoas em situações financeiramente vulneráveis a pagar suas contas por meio de doações anônimas.",
+    "role": "Desenvolvedor Full Stack"
+  }
+}

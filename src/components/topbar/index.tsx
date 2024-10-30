@@ -5,7 +5,7 @@ const Topbar = () => {
   const t = useTranslations("Components.Topbar");
   return (
     <header className="w-full bg-white sticky top-0 z-50">
-      <div className="max-w-7xl w-full mx-auto px-5 sm:px-10">
+      <div className="container">
         <div className="relative flex justify-between py-4">
           <Link className="font-bold text-black-100" href="/">
             Mateus Lopes

@@ -4,7 +4,7 @@ const Hero = () => {
   const t = useTranslations("Home.Hero");
 
   return (
-    <section id="hero" className="max-w-4xl w-full px-5 sm:px-10">
+    <section id="hero" className="max-w-4xl w-full px-5">
       <div className="flex justify-center relative py-40 z-10">
         <h1 className="text-black-100 text-5xl font-bold text-center">
           {t("title.text")}{" "}

@@ -42,7 +42,7 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   return (
     <section className="container flex flex-col gap-6 py-6">
       <Image
-        className="w-full h-96 object-cover"
+        className="w-full h-[36rem] object-cover"
         src={img.src}
         alt={img.alt}
         width={1080}

@@ -5,8 +5,8 @@ const Experience = () => {
   const t = useTranslations("Home.Experience");
 
   return (
-    <section id="works" className="w-full bg-gray-100 px-5 sm:px-10 py-20">
-      <div className="max-w-7xl w-full mx-auto flex flex-col gap-8 ">
+    <section id="works" className="w-full bg-gray-100 py-20">
+      <div className="container mx-auto flex flex-col gap-8 ">
         <h2 className="text-black-100 text-2xl font-bold">{t("title")}</h2>
         <div className="grid grid-cols-3 gap-x-4 gap-y-8">
           <ExperienceCard

@@ -4,14 +4,16 @@ import Image from "next/image";
 interface ProjectCardProps {
   title: string;
   description?: string;
+  src?: string;
+  locked?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, src = "/placeholder.svg", locked=false }) => {
   return (
-    <Link className="w-full flex flex-col gap-2 text-white" href="">
+    <Link className={`w-full flex flex-col gap-2 text-white ${!!locked ? 'cursor-default' : ''}`} href="">
       <Image
         className="w-full max-h-64 object-cover"
-        src="/placeholder.svg"
+        src={src}
         alt={title}
         width={256}
         height={256}

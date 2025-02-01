@@ -10,13 +10,7 @@ const Topbar = () => {
           <Link className="font-bold text-black-100" href="/">
             Mateus Lopes
           </Link>
-          <div className="max-w-xs w-full flex flex-wrap gap-2 justify-between">
-            <Link
-              href="/#experience"
-              className="hover:text-black-100 text-black-100/60"
-            >
-              {t("experience")}
-            </Link>
+          <div className="max-w-60 w-full flex flex-wrap gap-6 justify-end">
             <Link
               href="/#projects"
               className="hover:text-black-100 text-black-100/60"
@@ -24,7 +18,7 @@ const Topbar = () => {
               {t("projects")}
             </Link>
             <Link
-              href="/#contact"
+              href="#contact"
               className="hover:text-black-100 text-black-100/60"
             >
               {t("contact")}

@@ -8,9 +8,13 @@
     },
     "ExperienceHero": {
       "role": "Role",
+      "collaborators": "Collaborators",
+      "agency": "Agency",
       "duration": {
         "title": "Duração",
         "time": "{start} - {end}",
+        "present": "Present",
+        "weeks": "{weeks} weeks",
         "locale": "en-US"
       }
     }
@@ -30,8 +34,23 @@
       "title": "Projects I have worked on"
     }
   },
-  "GarrafaNoMar": {
-    "description": "Garrafa no Mar is an app designed to help people in financially vulnerable situations pay their bills through anonymous donations.",
+  "42 Rio": {
+    "description": {
+      "company": "Founded in 2013 by French entrepreneur Xavier Niel, 42 is a disruptive school that takes an innovative approach to training software engineers. With a methodology based on peer-to-peer learning (P2P), students face projects and challenges collaboratively, promoting both individual development and an entrepreneurial mindset."
+    },
+    "role": "Software Engineer"
+  },
+  "Garrafa": {
+    "description": {
+      "company": "Garrafa no Mar is an app designed to help people in financially vulnerable situations pay their bills through anonymous donations."
+    },
     "role": "Full Stack Developer"
+  },
+  "Outdoor": {
+    "description": {
+      "company": "Advanced Outdoor Solutions is a management and consulting company for outdoor hospitality properties, offering everything from park planning and design to complete management solutions.",
+      "job": "We developed the site responsively in WordPress with Oxygen Builder, following the design defined by the agency."
+    },
+    "role": "Web Developer"
   }
 }

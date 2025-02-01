@@ -9,7 +9,6 @@ export default function Home() {
     <main className="main">
       <Topbar />
       <Hero />
-      <Experience />
       <Projects />
       <Footer />
     </main>

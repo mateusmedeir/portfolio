@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { ExperienceHero } from "@/components/experience";
 
 export const metadata: Metadata = {
-  title: "42 Rio - Mateus Lopes",
+  title: "Youtube Redesign - Mateus Lopes",
 };
 
 export default function YTRedesign() {

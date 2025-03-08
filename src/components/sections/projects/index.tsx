@@ -8,6 +8,12 @@ const Projects = () => {
     <section id="projects" className="w-full bg-black-200 py-20">
       <div className="container flex flex-col gap-8">
         <div className="w-full gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <ProjectCard
+            title="Youtube Redesign"
+            description='Chrome extension'
+            src="/yt-redesign/logo.avif"
+            href="/yt-redesign"
+          />
           <ProjectCard title="42 Rio" src="/42-rio/logo.avif" href="/42-rio" />
           <ProjectCard
             title="Vitalongis"
@@ -26,12 +32,12 @@ const Projects = () => {
             src="/gnm/web-banner.avif"
           />
           <ProjectCard
-            title="Garrafa no Mar v2"
+            title="Garrafa no Mar App"
             description="Mobile app"
             href="/garrafa#app-v2"
           />
           <ProjectCard
-            title="Garrafa no Mar v1"
+            title="Garrafa no Mar MVP"
             description="Mobile app"
             href="/garrafa#app-v1"
           />

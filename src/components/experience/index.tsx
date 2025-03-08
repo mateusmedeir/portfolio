@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import toCapitalCase from '@/libs/toCapitalCase'
+import { ExternalLinkIcon } from 'lucide-react'
+import Link from 'next/link'
 
 interface ImgProps {
   src: string
@@ -10,6 +12,11 @@ interface ImgProps {
 interface DurationProps {
   start: Date
   end?: Date
+}
+
+interface ExperienceHeroLinkProps {
+  href: string
+  text: string
 }
 
 interface ExperienceHeroDetailsProps {
@@ -25,7 +32,8 @@ interface ExperienceHeroProps {
   companyDescription: string
   jobDescription?: string
   skills?: string[]
-  experienceDetails: ExperienceHeroDetailsProps
+  links?: ExperienceHeroLinkProps[]
+  experienceDetails?: ExperienceHeroDetailsProps
 }
 
 const ExperienceHero: React.FC<ExperienceHeroProps> = ({
@@ -34,6 +42,7 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   companyDescription,
   jobDescription,
   skills,
+  links,
   experienceDetails
 }) => {
   const t = useTranslations('Components.ExperienceHero')
@@ -41,7 +50,7 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   let startTime = ''
   let endTime = ''
 
-  if (typeof experienceDetails.duration !== 'number') {
+  if (experienceDetails && typeof experienceDetails.duration !== 'number') {
     startTime = `${toCapitalCase(
       experienceDetails.duration.start.toLocaleString(t('duration.locale'), {
         month: 'long'
@@ -67,61 +76,84 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
         priority
       />
       <div className="container">
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          <div className="flex flex-col col-span-2 gap-4">
-            <h1 className="text-black-100 font-bold text-2xl">{title}</h1>
-            <p className="text-black-100">{companyDescription}</p>
-            <p className="text-black-100">{jobDescription}</p>
-            {!!skills?.length && (
-              <div className="flex flex-col gap-4">
-                <h2 className="text-black-100 font-bold text-xl">Techs</h2>
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((skill, index) => (
-                    <p
+        <div className={`grid ${!!experienceDetails ? 'md:grid-cols-3' : ''} grid-cols-1 gap-4`}>
+          <div className={`flex flex-col ${!!experienceDetails ? 'col-span-2' : ''} gap-8`}>
+            <div className={`w-full flex flex-col gap-4`}>
+              <div className='flex flex-col gap-2'>
+                <h1 className="text-black-100 font-bold text-2xl">{title}</h1>
+                <p className="text-black-100">{companyDescription}</p>
+                {!!jobDescription && <p className="text-black-100">{jobDescription}</p>}
+
+              </div>
+              {!!skills?.length && (
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-black-100 font-bold text-xl">Techs</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill, index) => (
+                      <p
                       key={index}
-                      className="text-black-100 py-1.5 px-4 bg-gray-100 w-fit rounded-md"
+                      className="text-black-100 text-sm py-1.5 px-4 bg-gray-100 w-fit rounded-full"
+                      >
+                        {skill}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            {!!links?.length && (
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap gap-2">
+                  {links.map((link, index) => (
+                    <Link 
+                      href={link.href}
+                      key={index}
+                      className="w-fit flex gap-2 text-black-100 py-1.5 px-4 bg-gray-100 hover:bg-gray-200 rounded-md cursor-pointer"
                     >
-                      {skill}
-                    </p>
+                      {link.text}
+                      <ExternalLinkIcon className='w-5 h-5' />
+                    </Link>
                   ))}
                 </div>
               </div>
             )}
           </div>
-          <div className="md:w-fit w-full ml-auto md:flex md:flex-col grid grid-cols-2 gap-4">
-            <div>
-              <h2 className="text-black-100 font-bold">{t('role')}</h2>
-              <p className="text-black-100">{experienceDetails.role}</p>
-            </div>
-            {!!experienceDetails.collaborators && (
+          {!!experienceDetails &&
+            <div className="md:w-fit w-full ml-auto md:flex md:flex-col grid grid-cols-2 gap-4">
+              <div>
+                <h2 className="text-black-100 font-bold">{t('role')}</h2>
+                <p className="text-black-100">{experienceDetails.role}</p>
+              </div>
+              {!!experienceDetails.collaborators && (
+                <div>
+                  <h2 className="text-black-100 font-bold">
+                    {t('collaborators')}
+                  </h2>
+                  {experienceDetails.collaborators?.map((collaborator, index) => (
+                    <p key={index} className="text-black-100">
+                      {collaborator}
+                    </p>
+                  ))}
+                </div>
+              )}
+              {!!experienceDetails.agency && (
+                <div>
+                  <h2 className="text-black-100 font-bold">{t('agency')}</h2>
+                  <p className="text-black-100">{experienceDetails.agency}</p>
+                </div>
+              )}
               <div>
                 <h2 className="text-black-100 font-bold">
-                  {t('collaborators')}
+                  {t('duration.title')}
                 </h2>
-                {experienceDetails.collaborators?.map((collaborator, index) => (
-                  <p key={index} className="text-black-100">
-                    {collaborator}
-                  </p>
-                ))}
+                <p className="text-black-100">
+                  {typeof experienceDetails.duration === 'number'
+                    ? t('duration.weeks', { weeks: experienceDetails.duration })
+                    : t('duration.time', { start: startTime, end: endTime })}
+                </p>
               </div>
-            )}
-            {!!experienceDetails.agency && (
-              <div>
-                <h2 className="text-black-100 font-bold">{t('agency')}</h2>
-                <p className="text-black-100">{experienceDetails.agency}</p>
-              </div>
-            )}
-            <div>
-              <h2 className="text-black-100 font-bold">
-                {t('duration.title')}
-              </h2>
-              <p className="text-black-100">
-                {typeof experienceDetails.duration === 'number'
-                  ? t('duration.weeks', { weeks: experienceDetails.duration })
-                  : t('duration.time', { start: startTime, end: endTime })}
-              </p>
             </div>
-          </div>
+          }
         </div>
       </div>
     </section>

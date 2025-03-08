@@ -14,7 +14,7 @@ export default function School42Rio() {
     <main className="main">
       <Topbar />
       <ExperienceHero
-        img={{ src: "/42-rio/full-logo.svg", alt: "Advanced Outdoor Solutions" }}
+        img={{ src: "/42-rio/full-logo.svg", alt: "42 Rio Logo" }}
         title="42 Rio"
         companyDescription={t("description.company")}
         experienceDetails={{

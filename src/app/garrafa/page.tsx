@@ -39,6 +39,16 @@ export default function GarrafaNoMar() {
           'Swagger',
           'PostgreSQL'
         ]}
+        links={[
+          {
+            href: 'https://www.garrafanomar.com.br/',
+            text: 'garrafanomar.com.br'
+          },
+          {
+            href: 'https://play.google.com/store/apps/details?id=com.garrafa.app',
+            text: 'Google Play Store'
+          }
+        ]}
       />
       <Footer />
     </main>

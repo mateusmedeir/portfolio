@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Footer from '@/components/footer'
 import Topbar from '@/components/topbar'
 import { useTranslations } from 'next-intl'
-import { ExperienceHero, ExperienceProject } from '@/components/experience'
+import { ExperienceHero, ExperienceProject } from '@/components/experience-hero'
 
 export const metadata: Metadata = {
   title: 'Garrafa no Mar - Mateus Lopes'
@@ -16,7 +16,7 @@ export default function GarrafaNoMar() {
       <ExperienceHero
         img={{ src: '/gnm/full-logo.svg', alt: 'Garrafa no Mar Logo' }}
         title="Garrafa no Mar"
-        companyDescription={t("description.company")}
+        companyDescription={t('summary.company')}
         experienceDetails={{
           role: t('role'),
           duration: {

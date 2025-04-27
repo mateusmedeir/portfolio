@@ -76,14 +76,31 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
         priority
       />
       <div className="container">
-        <div className={`grid ${!!experienceDetails ? 'md:grid-cols-3' : ''} grid-cols-1 gap-4`}>
-          <div className={`flex flex-col ${!!experienceDetails ? 'col-span-2' : ''} gap-8`}>
+        <div
+          className={`grid ${
+            !!experienceDetails ? 'md:grid-cols-3' : ''
+          } grid-cols-1 gap-4`}
+        >
+          <div
+            className={`flex flex-col ${
+              !!experienceDetails ? 'col-span-2' : ''
+            } gap-8`}
+          >
             <div className={`w-full flex flex-col gap-4`}>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <h1 className="text-black-100 font-bold text-2xl">{title}</h1>
-                <p className="text-black-100">{companyDescription}</p>
-                {!!jobDescription && <p className="text-black-100">{jobDescription}</p>}
-
+                <p className="text-black-100 whitespace-pre-line">
+                  {companyDescription}
+                </p>
+                {!!jobDescription &&
+                  jobDescription.split('\n').map((line, index) => (
+                    <p
+                      key={index}
+                      className="text-black-100 whitespace-pre-line"
+                    >
+                      {line}
+                    </p>
+                  ))}
               </div>
               {!!skills?.length && (
                 <div className="flex flex-col gap-2">
@@ -91,8 +108,8 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
                   <div className="flex flex-wrap gap-2">
                     {skills.map((skill, index) => (
                       <p
-                      key={index}
-                      className="text-black-100 text-sm py-1.5 px-4 bg-gray-100 w-fit rounded-full"
+                        key={index}
+                        className="text-black-100 text-sm py-1.5 px-4 bg-gray-100 w-fit rounded-full"
                       >
                         {skill}
                       </p>
@@ -105,47 +122,54 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
               <div className="flex flex-col gap-4">
                 <div className="flex flex-wrap gap-2">
                   {links.map((link, index) => (
-                    <Link 
-                      href={link.href}
+                    <Link
                       key={index}
+                      href={link.href}
+                      target="_blank"
                       className="w-fit flex gap-2 text-black-100 py-1.5 px-4 bg-gray-100 hover:bg-gray-200 rounded-md cursor-pointer"
                     >
                       {link.text}
-                      <ExternalLinkIcon className='w-5 h-5' />
+                      <ExternalLinkIcon className="w-5 h-5" />
                     </Link>
                   ))}
                 </div>
               </div>
             )}
           </div>
-          {!!experienceDetails &&
+          {!!experienceDetails && (
             <div className="md:w-fit w-full ml-auto md:flex md:flex-col grid grid-cols-2 gap-4">
               <div>
-                <h2 className="text-black-100 font-bold">{t('role')}</h2>
+                <h3 className="text-black-100 font-bold text-lg">
+                  {t('role')}
+                </h3>
                 <p className="text-black-100">{experienceDetails.role}</p>
               </div>
               {!!experienceDetails.collaborators && (
                 <div>
-                  <h2 className="text-black-100 font-bold">
+                  <h3 className="text-black-100 font-bold text-lg">
                     {t('collaborators')}
-                  </h2>
-                  {experienceDetails.collaborators?.map((collaborator, index) => (
-                    <p key={index} className="text-black-100">
-                      {collaborator}
-                    </p>
-                  ))}
+                  </h3>
+                  {experienceDetails.collaborators?.map(
+                    (collaborator, index) => (
+                      <p key={index} className="text-black-100">
+                        {collaborator}
+                      </p>
+                    )
+                  )}
                 </div>
               )}
               {!!experienceDetails.agency && (
                 <div>
-                  <h2 className="text-black-100 font-bold">{t('agency')}</h2>
+                  <h3 className="text-black-100 font-bold text-lg">
+                    {t('agency')}
+                  </h3>
                   <p className="text-black-100">{experienceDetails.agency}</p>
                 </div>
               )}
               <div>
-                <h2 className="text-black-100 font-bold">
+                <h3 className="text-black-100 font-bold text-lg">
                   {t('duration.title')}
-                </h2>
+                </h3>
                 <p className="text-black-100">
                   {typeof experienceDetails.duration === 'number'
                     ? t('duration.weeks', { weeks: experienceDetails.duration })
@@ -153,7 +177,7 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
                 </p>
               </div>
             </div>
-          }
+          )}
         </div>
       </div>
     </section>

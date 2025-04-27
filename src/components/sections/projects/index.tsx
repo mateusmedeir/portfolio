@@ -9,8 +9,14 @@ const Projects = () => {
       <div className="container flex flex-col gap-8">
         <div className="w-full gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <ProjectCard
+            title="Starship - 42 Rio"
+            description="Website"
+            src="/42-rio/starship-mockup.avif"
+            href="/42-rio#starship"
+          />
+          <ProjectCard
             title="Youtube Redesign"
-            description='Chrome extension'
+            description="Chrome extension"
             src="/yt-redesign/logo.avif"
             href="/yt-redesign"
           />
@@ -21,25 +27,14 @@ const Projects = () => {
             href="/vitalongis"
           />
           <ProjectCard
+            title="Garrafa no Mar App"
+            description="Mobile app"
+            href="/garrafa#app"
+          />
+          <ProjectCard
             title="Garrafa no Mar"
             href="/garrafa"
             src="/gnm/logo.avif"
-          />
-          <ProjectCard
-            title="Garrafa no Mar Website"
-            description="Website"
-            href="/garrafa#web"
-            src="/gnm/web-banner.avif"
-          />
-          <ProjectCard
-            title="Garrafa no Mar App"
-            description="Mobile app"
-            href="/garrafa#app-v2"
-          />
-          <ProjectCard
-            title="Garrafa no Mar MVP"
-            description="Mobile app"
-            href="/garrafa#app-v1"
           />
           <ProjectCard
             title="Ishida Brasil"

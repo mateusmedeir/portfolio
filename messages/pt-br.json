@@ -35,24 +35,110 @@
     }
   },
   "YT Redesign": {
-    "description": {
+    "summary": {
       "company": "YouTube Redesign é uma extensão inspirada no redesign feito pela Juxtopposed, com o objetivo de aprimorar a interface do YouTube e adicionar novas features."
     }
   },
   "42 Rio": {
-    "description": {
-      "company": "Fundada em 2013 pelo empresário francês Xavier Niel, a 42 é uma escola disruptiva que adota uma abordagem inovadora na formação de engenheiros de software. Com uma metodologia baseada em aprendizado entre pares (P2P), os alunos enfrentam projetos e desafios colaborativamente, promovendo tanto o desenvolvimento individual quanto uma mentalidade empreendedora."
+    "role": "Engenheiro de Software",
+    "summary": {
+      "company": "Fundada em 2013 pelo empresário francês Xavier Niel, a 42 é uma escola disruptiva que adota uma abordagem inovadora na formação de engenheiros de software. Com uma metodologia baseada em aprendizado entre pares (P2P), os alunos enfrentam projetos e desafios colaborativamente, promovendo tanto o desenvolvimento individual quanto uma mentalidade empreendedora.",
+      "job": "Durante meu período na 42 Rio, desenvolvi junto do meu time o Starship, uma plataforma interna criada para unificar a comunicação entre alunos e staff, impulsionar a empregabilidade dos estudantes e conectar talentos a empresas parceiras.\nConstruída com foco em centralização, organização e impacto social, a plataforma reúne funcionalidades como sistema de tickets, avisos, calendário de eventos, quadro de vagas e trilha de desenvolvimento paralelo."
     },
-    "role": "Engenheiro de Software"
+    "description": {
+      "role": {
+        "title": "Minhas Funções",
+        "list-1": {
+          "item-1": "Liderança técnica de um time de 10 profissionais, em colaboração direta com o PO (Product Owner).",
+          "item-2": "Responsável pela modelagem do banco de dados",
+          "item-3": "Co‑responsável pelo design da plataforma em conjunto com o PO",
+          "item-4": "Implementação da arquitetura do front‑end com React e Next.js, e do back‑end com Django REST Framework.",
+          "item-5": "Responsável por code reviews e manutenção da qualidade do código."
+        }
+      },
+      "general": {
+        "title": "Visão Geral",
+        "text": "A 42 Rio enfrentava desafios operacionais e pedagógicos causados pela fragmentação de suas ferramentas de comunicação (Discord, Intra e Spaceship). Além disso:",
+        "list-1": {
+          "title": "Alunos",
+          "item-1": "Precisavam acessar múltiplas ferramentas, o que fragmentava o fluxo de estudos e atrapalhava a organização.",
+          "item-2": "Enfrentavam desafios para ingressar no mercado de trabalho."
+        },
+        "list-2": {
+          "title": "Staff",
+          "item-1": "Tinha dificuldade para centralizar interações e acompanhar a evolução dos alunos de forma eficiente."
+        },
+        "list-3": {
+          "title": "Empresas Parceiras",
+          "item-1": "Enfrentavam dificuldades para filtrar candidatos adequados nas plataformas de recrutamento utilizadas.",
+          "item-2": "Relatavam a recorrente falta de soft skills entre os candidatos, mesmo quando tecnicamente qualificados."
+        }
+      },
+      "discovery": {
+        "title": "Etapa de Discovery (Pesquisa e Definição de Soluções)",
+        "text": "Para garantir que a plataforma fosse construída com base em necessidades reais, iniciamos o projeto com uma etapa de discovery estruturada, focando em três frentes principais: alunos, staff da 42 Rio e empresas parceiras.",
+        "list-1": {
+            "title": "Metodologia",
+            "item-1": "<bold>Entrevistas qualitativas e quantitativas com alunos, gestores de RH e líderes de empresas parceiras</bold>, com o objetivo de entender expectativas, dificuldades e critérios de contratação.",
+            "item-2": "<bold>Reuniões de alinhamento com membros da staff</bold>, onde foram levantadas as principais dores relacionadas à comunicação, gestão de estudantes e acompanhamento de evolução dentro da trilha da 42.",
+            "item-3": "<bold>Utilização de Scrum como metodologia ágil</bold>, com sprints quinzenais, reuniões semanais de planejamento e acompanhamento (plannings e dailies), e retrospectivas ao final de cada ciclo. A gestão de tarefas e progresso foi feita via GitHub Projects."
+          },
+          "list-2": {
+            "title": "Principais Insights",
+            "item-1": "<bold>Estudantes</bold> se sentiam despreparados para o mercado e sobrecarregados pelo uso de diversas ferramentas que não se comunicavam entre si, o que impactava diretamente a organização e o foco nos estudos.",
+            "item-2": "<bold>Gestores de RH e líderes de empresas</bold> relatavam dificuldades para encontrar candidatos com equilíbrio entre habilidades técnicas e comportamentais, além de limitações nos filtros e critérios das plataformas de recrutamento tradicionais.",
+            "item-3": "<bold>Staff</bold> precisava de mais controle sobre as comunicações com os alunos e de mecanismos para acompanhar a jornada de cada aluno de forma mais centralizada e eficiente."
+          }
+      },
+      "problem-statement": {
+        "title": "Declaração do Problema",
+        "text": "Como centralizar a comunicação entre staff e alunos e estruturar uma trilha de empregabilidade que prepare os alunos para o mercado e os conecte de forma confiável as empresas parceiras?"
+      },
+      "solution": {
+        "title": "Soluções",
+        "list-1": {
+          "title": "Plataforma Unificada",
+          "item-1": "<bold>Acompanhamento de progresso:</bold> tanto alunos quanto membros da staff conseguem visualizar o avanço individual ao longo do curso e das atividades realizadas na plataforma.",
+          "item-2": "<bold>Avisos e calendário de eventos</bold>, com listagem de presença dos alunos em cada atividade, facilitando o acompanhamento por parte da staff.",
+          "item-3": "<bold>Sistema de tickets:</bold> alunos podem abrir solicitações para a staff em categorias específicas (ex: problemas no campus, bolsa auxílio, e etc.), com histórico e status de cada interação.",
+          "item-4": "<bold>Notificações em tempo real e por e-mail</bold>, garantindo que as comunicações importantes sejam vistas mesmo fora da plataforma.",
+          "item-5": "<bold>Centralização de documentos</bold>, como regulamentos, políticas internas e materiais de apoio — facilitando o acesso à informação."
+        }
+        ,
+        "list-2": {
+          "title": "Trilha de Aprendizagem Paralela",
+          "item-1": "Projetos desenvolvidos com apoio de profissionais atuantes no mercado.",
+          "item-2": "Foco em habilidades que aumentam a empregabilidade, como estruturação de código, comunicação em equipe e organização.",
+          "item-3": "<bold>Avaliação por pares (peer-to-peer), seguindo o mesmo modelo da 42:</bold> outros alunos validam os projetos, garantindo que o conhecimento tenha sido realmente absorvido e aplicado de forma prática."
+        },
+        "list-3": {
+          "title": "Mentorias",
+          "item-1": "Mentorias com profissionais de diferentes áreas, incluindo alunos da própria 42 que já ingressaram na área.",
+          "item-2": "Estímulo ao networking, troca de experiências e desenvolvimento prático com base em vivências reais do mercado."
+        },
+        "list-4": {
+          "title": "Desafios Técnicos",
+          "item-1": "Projetos com escopo fechado e foco em resolução de problemas práticos.",
+          "item-2": "Avaliação de hard skills específicas (como estruturação de API, modelagem de banco, testes, etc.).",
+          "item-3": "<bold>Alguns desafios foram inspirados ou adaptados a partir de etapas técnicas reais de processos seletivos de empresas parceiras</bold>, aproximando os alunos da realidade do mercado."
+        },
+        "list-5": {
+          "title": "Portal de Carreiras",
+          "item-1": "<bold>Edição de currículo dentro da plataforma</bold>, permitindo que o aluno adicione suas experiências profissionais, formação, projetos pessoais e habilidades técnicas.",
+          "item-2": "<bold>Possibilidade de exportar o currículo em PDF</bold>, facilitando o compartilhamento com recrutadores e empresas parceiras.",
+          "item-3": "<bold>Feed de vagas com filtros</bold>, permitindo que o aluno encontre oportunidades mais alinhadas ao seu perfil."
+        }
+      }
+    }
   },
   "Garrafa": {
-    "description": {
+    "summary": {
       "company": "O Garrafa no Mar é um aplicativo projetado para ajudar pessoas em situações financeiramente vulneráveis a pagar suas contas por meio de doações anônimas."
     },
     "role": "Desenvolvedor Full Stack"
   },
   "Outdoor": {
-    "description": {
+    "summary": {
       "company": "A Advanced Outdoor Solutions é uma empresa de gestão e consultoria para propriedades de hospitalidade ao ar livre, oferecendo desde planejamento e design de parques até soluções completas de gerenciamento.",
       "job": "Desenvolvemos o site de maneira responsiva no WordPress com o Oxygen Builder, seguindo o design definido pela agência."
     },

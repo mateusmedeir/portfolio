@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { useTranslations } from "next-intl";
+import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 const Topbar = () => {
-  const t = useTranslations("Components.Topbar");
+  const t = useTranslations('Components.Topbar')
   return (
     <header className="w-full bg-white sticky top-0 z-50">
       <div className="container">
@@ -15,26 +15,20 @@ const Topbar = () => {
               href="/#projects"
               className="hover:text-black-100 text-black-100/60"
             >
-              {t("projects")}
-            </Link>
-            <Link
-              href="#contact"
-              className="hover:text-black-100 text-black-100/60"
-            >
-              {t("contact")}
+              {t('projects')}
             </Link>
             <Link
               href="/resume.pdf"
               target="_blank"
               className="hover:text-black-100 text-black-100/60"
             >
-              {t("resume")}
+              {t('resume')}
             </Link>
           </div>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Topbar;
+export default Topbar

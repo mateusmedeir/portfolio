@@ -68,7 +68,7 @@ const ExperienceHero: React.FC<ExperienceHeroProps> = ({
   return (
     <section className="w-full grid gap-8 py-10">
       <Image
-        className="mx-auto max-w-[112rem] w-full h-[40rem] object-cover md:px-5"
+        className="mx-auto max-w-[112rem] w-full h-[40rem] max-md:h-[34rem] max-2xs:h-[24rem] object-cover md:px-5"
         src={img.src}
         alt={img.alt}
         width={1080}

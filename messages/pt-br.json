@@ -50,8 +50,8 @@
         "title": "Minhas Funções",
         "list-1": {
           "item-1": "Liderança técnica de um time de 10 profissionais, em colaboração direta com o PO (Product Owner).",
-          "item-2": "Responsável pela modelagem do banco de dados",
-          "item-3": "Co‑responsável pelo design da plataforma em conjunto com o PO",
+          "item-2": "Responsável pela modelagem do banco de dados.",
+          "item-3": "Co‑responsável pelo design da plataforma em conjunto com o PO.",
           "item-4": "Implementação da arquitetura do front‑end com React e Next.js, e do back‑end com Django REST Framework.",
           "item-5": "Responsável por code reviews e manutenção da qualidade do código."
         }

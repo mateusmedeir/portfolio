@@ -1,24 +1,25 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import './globals.css'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getMessages } from 'next-intl/server'
+import { Analytics } from '@vercel/analytics/next'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Mateus Lopes - Full Stack Developer",
+  title: 'Mateus Lopes - Full Stack Developer',
   description:
-    "Experienced Full Stack Developer with a demonstrated history of working in the information technology and services industry. Skilled in React, Node.js, TypeScript, and more.",
-};
+    'Experienced Full Stack Developer with a demonstrated history of working in the information technology and services industry. Skilled in React, Node.js, TypeScript, and more.'
+}
 
 export default async function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+  const locale = await getLocale()
+  const messages = await getMessages()
 
   return (
     <html lang={locale}>
@@ -45,7 +46,8 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
